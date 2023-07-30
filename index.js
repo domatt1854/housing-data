@@ -112,8 +112,8 @@ async function init() {
     console.log("data loading")
     // data = await d3.csv('https://raw.githubusercontent.com/imsatyamshandilya/ML-housing_price_prediction/master/housing.csv');
     barplot_data = await d3.csv('https://raw.githubusercontent.com/domatt1854/housing-data/main/ocean_proximity_counts.csv');
-    barplot_data_median = await d3.csv('https://raw.githubusercontent.com/domatt1854/housing-data/main/ocean_proximity_median_value.csv')
-    barplot_data_income_median = await d3.csv('https://raw.githubusercontent.com/domatt1854/housing-data/main/ocean_proximity_median_income.csv')
+    barplot_data_median = await d3.csv('https://raw.githubusercontent.com/domatt1854/housing-data/main/ocean_proximity_median_value.csv');
+    barplot_data_income_median = await d3.csv('https://raw.githubusercontent.com/domatt1854/housing-data/main/ocean_proximity_median_income.csv');
     slide_number = 1;
     await renderBarplot();
     console.log("done");
@@ -144,10 +144,10 @@ async function renderVisualization(state) {
         await renderBarplot(0);
     }    
     else if ( slide_number == 2 ) {
-        await renderBarPlot3(0);
+        await renderBarPlot2(0);
     }
     else if( slide_number == 3) {
-        await renderBarPlot2(0);
+        await renderBarPlot3(0);
     }
 }
 
@@ -158,10 +158,10 @@ async function updateAnnotationIndex() {
         await renderBarplot(slide_annotation_index);
     }
     else if (slide_number == 2) {
-        await renderBarPlot3(slide_annotation_index);
+        await renderBarPlot2(slide_annotation_index);
     }
     else if( slide_number == 3) {
-        await renderBarPlot2(slide_annotation_index);
+        await renderBarPlot3(slide_annotation_index);
     }
 }
 
