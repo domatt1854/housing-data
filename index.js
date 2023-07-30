@@ -132,8 +132,8 @@ async function renderVisualization(state) {
     if ( state === 'prev' ) {
         slide_number--;
 
-        if( slide_number < 0 ) {
-            slide_number = 0;
+        if( slide_number < 1 ) {
+            slide_number = 1;
         }
     }
 
@@ -147,7 +147,7 @@ async function renderVisualization(state) {
         await renderBarPlot3(0);
     }
     else if( slide_number == 3) {
-        renderBarPlot2(slide_annotation_index);
+        renderBarPlot2(0);
     }
 }
 
