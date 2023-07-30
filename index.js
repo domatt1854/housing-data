@@ -147,7 +147,7 @@ async function renderVisualization(state) {
         await renderBarPlot3(0);
     }
     else if( slide_number == 3) {
-        renderBarPlot2(0);
+        await renderBarPlot2(0);
     }
 }
 
@@ -155,13 +155,13 @@ async function updateAnnotationIndex() {
     slide_annotation_index++;
     console.log("slide annotation index updated to: " + slide_annotation_index);
     if (slide_number == 1) {
-        renderBarplot(slide_annotation_index);
+        await renderBarplot(slide_annotation_index);
     }
     else if (slide_number == 2) {
-        renderBarPlot3(slide_annotation_index);
+        await renderBarPlot3(slide_annotation_index);
     }
     else if( slide_number == 3) {
-        renderBarPlot2(slide_annotation_index);
+        await renderBarPlot2(slide_annotation_index);
     }
 }
 
