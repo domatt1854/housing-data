@@ -1,11 +1,12 @@
 <html>
 <script src='https://d3js.org/d3.v5.min.js'></script>
+<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 <body onload="init()">
     <div>
-        <button type="button" onclick="renderVisualization('next')">Next</button>
         <button type="button" onclick="renderVisualization('prev')">Prev</button>
+        <button type="button" onclick="renderVisualization('next')">Next</button>
     </div>
-    <svg width=600 height=600></svg>
+    <svg width=750 height=600 onclick="updateAnnotationIndex()"></svg>
 <script src="index.js"></script>
 </body>
 </html>
